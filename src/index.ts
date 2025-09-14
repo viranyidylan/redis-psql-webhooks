@@ -7,7 +7,7 @@ const PORT = 3000;
 //const redis = createClient();
 //await redis.connect();
 
-const queue = [];
+const queue: any[] = [];
 
 app.use(express.json());
 
@@ -44,7 +44,7 @@ function dequeue() {
 	return item;
 }
 
-async function enqueue(payload) {
+async function enqueue(payload: any) {
 	queue.push(payload);
 	console.log(`queued ${JSON.stringify(payload)}`);
 }
