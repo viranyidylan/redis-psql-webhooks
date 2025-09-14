@@ -55,3 +55,4 @@ async function ingest(body) {
 }
 */
 
+export default app;
